@@ -11,7 +11,6 @@ function onButtonDecrementClick() {
 		step -= 1;
 		counterValue.textContent = `${step}`;
 	}
-	
 };
 function onButtonIncrementClick() {
 

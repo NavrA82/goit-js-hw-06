@@ -12,7 +12,52 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const galleryList = document.querySelector('.gallery');
+const elements = images.map(({ url, alt }) => `<li><img class = "image" src="${url}" alt="${alt}"></li>`).join("");
+  galleryList.insertAdjacentHTML("beforeend", elements);
+galleryList.style.cssText =
+	"list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 24px;";
+const imagesGallery = document.querySelectorAll("img");
+imagesGallery.forEach(img => {
+	img.style.cssText =
+		"width: 300px; height: 200px; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12), 0px 2px 10px rgba(0, 0, 0, 0.2);";
+});
 
-const gallery = document.querySelector('.gallery')
-const elements = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`).join("");
-gallery.insertAdjacentHTML("beforeend", elements);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Варіант 2 ЛЕГО
+// 	const galleryItemOne = galleryList.firstElementChild;
+// 	const galleryImagesOne = galleryItemOne.firstElementChild;
+// 	const galleryItemTwo = galleryList.childNodes[1];
+// 	const galleryImagesTwo = galleryItemTwo.firstElementChild;
+// 	const galleryItemThree = galleryList.lastElementChild;
+// 	const galleryImagesThree = galleryItemThree.firstElementChild;
+// galleryImagesOne.style.cssText =
+// 	"width: 300px; height: 200px; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12), 0px 2px 10px rgba(0, 0, 0, 0.2);";
+// galleryImagesTwo.style.cssText =
+// 	"width: 300px; height: 200px; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12), 0px 2px 10px rgba(0, 0, 0, 0.2);";
+// galleryImagesThree.style.cssText =
+// 	"width: 300px; height: 200px; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12), 0px 2px 10px rgba(0, 0, 0, 0.2);";
