@@ -3,5 +3,5 @@ const brElementSibling = inputFontSizeControl.nextElementSibling;
 const textChange = brElementSibling.nextElementSibling;
 inputFontSizeControl.addEventListener("input", textFontSizeControl);
 function textFontSizeControl(event) {
-textChange.style.fontSize = `${event.currentTarget.value}px`;
+	textChange.style.fontSize = `${event.currentTarget.value}px`;
 }

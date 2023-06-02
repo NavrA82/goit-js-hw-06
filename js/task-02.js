@@ -1,11 +1,4 @@
-const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
-];
+const ingredients = ["Potatoes", "Mushrooms", "Garlic", "Tomatos", "Herbs", "Condiments"];
 
 // Варіант 3
 const list = document.querySelector("#ingredients");
@@ -20,8 +13,6 @@ ingredients.forEach((box, index) => {
 list.append(...elements);
 console.log(list);
 
-
-
 // Варіант 2
 // const list = document.querySelector("#ingredients");
 // const elements = [];
@@ -34,9 +25,6 @@ console.log(list);
 // };
 // list.append(...elements);
 // console.log(list);
-
-
-
 
 // Варіант 1 дідівський
 // const list = document.querySelector("#ingredients");
@@ -58,6 +46,5 @@ console.log(list);
 // const li5 = document.createElement("li");
 // li5.textContent = ingredients[5];
 // li5.classList.add("item");
-// list.append(li, li1, li2, li3, li4, li5); 
+// list.append(li, li1, li2, li3, li4, li5);
 // console.log(list)
-

@@ -13,12 +13,6 @@ function getRandomHexColor() {
 		.padStart(6, 0)}`;
 }
 
-
-
-
-
-
-
 // Варіан 2 стукання до силекторів
 // const widgetChangeColor = document.querySelector(".widget");
 // const buttonChangeColor = widgetChangeColor.lastElementChild;
