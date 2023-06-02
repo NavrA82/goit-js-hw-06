@@ -31,8 +31,7 @@ function getRandomHexColor() {
 		.padStart(6, 0)}`;
 }
 
-
-// Варіант 2 заморочений
+// Варіант 2 стукання до силекторів
 // const elementControls = document.querySelector("#controls");
 // const onInputNumber = elementControls.firstElementChild;
 // const buttonCreate = onInputNumber.nextElementSibling;

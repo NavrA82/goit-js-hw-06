@@ -1,6 +1,5 @@
-const counter = document.querySelector("#counter");
 const counterValue = document.querySelector('#value')
-const buttonDecrement = counter.firstElementChild;
+const buttonDecrement = document.querySelector('button[data-action="decrement"]');
 const buttonIncrement = counter.lastElementChild;
 let step = 0;
 buttonDecrement.addEventListener("click", onButtonDecrementClick);
@@ -25,6 +24,9 @@ function onButtonIncrementClick() {
 
 
 // варіант 1 не заходить у мінус 
+// const counterValue = document.querySelector("#value");
+// const buttonDecrement = counter.firstElementChild;
+// const buttonIncrement = counter.lastElementChild;
 // function onButtonDecrementClick() {
 // 	if (step > 0 ) {
 // 		step -= 1;
