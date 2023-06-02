@@ -1,7 +1,7 @@
 const elementControls = document.querySelector("#controls");
 const onInputNumber = elementControls.firstElementChild;
-const buttonCreate = onInputNumber.nextElementSibling;
-const buttonDestroy = elementControls.lastElementChild;
+const buttonCreate = document.querySelector("button[data-create]");
+const buttonDestroy = document.querySelector("button[data-destroy]");
 const boxesElements = elementControls.nextElementSibling;
 buttonCreate.addEventListener("click", onClickCountBoxesElements);
 buttonDestroy.addEventListener("click", onClickDeleteBoxesElements);
@@ -30,3 +30,13 @@ function getRandomHexColor() {
 		.toString(16)
 		.padStart(6, 0)}`;
 }
+
+
+// Варіант 2 заморочений
+// const elementControls = document.querySelector("#controls");
+// const onInputNumber = elementControls.firstElementChild;
+// const buttonCreate = onInputNumber.nextElementSibling;
+// const buttonDestroy = elementControls.lastElementChild;
+// const boxesElements = elementControls.nextElementSibling;
+// buttonCreate.addEventListener("click", onClickCountBoxesElements);
+// buttonDestroy.addEventListener("click", onClickDeleteBoxesElements);
