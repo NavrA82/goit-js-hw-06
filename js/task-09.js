@@ -1,16 +1,16 @@
-const widgetChangeColor = document.querySelector(".widget");
-const elementChangeColor = document.querySelector(".color");
+const widgetChangeColor = document.querySelector('.widget');
+const elementChangeColor = document.querySelector('.color');
 const buttonChangeColor = widgetChangeColor.lastElementChild;
-buttonChangeColor.addEventListener("click", onButtonChangeColor);
+buttonChangeColor.addEventListener('click', onButtonChangeColor);
 function onButtonChangeColor(event) {
-	const randomColor = getRandomHexColor();
-	elementChangeColor.textContent = `${randomColor}`;
-	document.body.style.backgroundColor = `${randomColor}`;
+  const randomColor = getRandomHexColor();
+  elementChangeColor.textContent = `${randomColor}`;
+  document.body.style.backgroundColor = `${randomColor}`;
 }
 function getRandomHexColor() {
-	return `#${Math.floor(Math.random() * 16777215)
-		.toString(16)
-		.padStart(6, 0)}`;
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
 
 // Варіан 2 стукання до силекторів

@@ -1,31 +1,31 @@
-const onInputNumber = document.querySelector("input");
-const buttonCreate = document.querySelector("button[data-create]");
-const buttonDestroy = document.querySelector("button[data-destroy]");
-const boxesElements = document.querySelector("#boxes");
-buttonCreate.addEventListener("click", onClickCountBoxesElements);
-buttonDestroy.addEventListener("click", onClickDeleteBoxesElements);
+const onInputNumber = document.querySelector('input');
+const buttonCreate = document.querySelector('button[data-create]');
+const buttonDestroy = document.querySelector('button[data-destroy]');
+const boxesElements = document.querySelector('#boxes');
+buttonCreate.addEventListener('click', onClickCountBoxesElements);
+buttonDestroy.addEventListener('click', onClickDeleteBoxesElements);
 function onClickCountBoxesElements() {
-	createBoxes(onInputNumber.value);
+  createBoxes(onInputNumber.value);
 }
 function createBoxes(amount) {
-	let divTotalArray = [];
-	for (let i = 1; i <= amount; i = i + 1) {
-		let step = i * 10;
-		const markupDiv = `<div class = "box" style = "width: ${30 + step}px; height: ${
-			30 + step
-		}px; background-color: ${getRandomHexColor()}"></div>`;
-		divTotalArray.push(markupDiv);
-	}
-	boxesElements.insertAdjacentHTML("beforeend", divTotalArray.join(""));
+  let divTotalArray = [];
+  for (let i = 1; i <= amount; i = i + 1) {
+    let step = i * 10;
+    const markupDiv = `<div class = "box" style = "width: ${30 + step}px; height: ${
+      30 + step
+    }px; background-color: ${getRandomHexColor()}"></div>`;
+    divTotalArray.push(markupDiv);
+  }
+  boxesElements.insertAdjacentHTML('beforeend', divTotalArray.join(''));
 }
 function onClickDeleteBoxesElements(event) {
-	onInputNumber.value = "";
-	boxesElements.innerHTML = "";
+  onInputNumber.value = '';
+  boxesElements.innerHTML = '';
 }
 function getRandomHexColor() {
-	return `#${Math.floor(Math.random() * 16777215)
-		.toString(16)
-		.padStart(6, 0)}`;
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
 
 // Варіант 2 бородатий на милицях  - стукання до силекторів плюс звернення і передавання стилів через forEach()

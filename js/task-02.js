@@ -1,17 +1,28 @@
-const ingredients = ["Potatoes", "Mushrooms", "Garlic", "Tomatos", "Herbs", "Condiments"];
+const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
 
-// Варіант 3
-const list = document.querySelector("#ingredients");
-const elements = [];
-ingredients.forEach((box, index) => {
-	const li = document.createElement("li");
-	li.textContent = ingredients[index];
-	li.classList.add("item");
-	console.log(li);
-	elements.push(li);
+// Варіант 4
+
+const list = document.querySelector('#ingredients');
+const elements = ingredients.map(element => {
+  const li = document.createElement('li');
+  li.textContent = element;
+  li.classList.add('item');
+  return li;
 });
 list.append(...elements);
-console.log(list);
+
+// Варіант 3
+// const list = document.querySelector('#ingredients');
+// const elements = [];
+// ingredients.forEach((box, index) => {
+//   const li = document.createElement('li');
+//   li.textContent = ingredients[index];
+//   li.classList.add('item');
+//   console.log(li);
+//   elements.push(li);
+// });
+// list.append(...elements);
+// console.log(list);
 
 // Варіант 2
 // const list = document.querySelector("#ingredients");
