@@ -1,14 +1,14 @@
-const userName = document.querySelector('#validation-input');
-userName.addEventListener('blur', event => {
-  console.dir(event.currentTarget.value.trim().length);
+// const userName = document.querySelector('#validation-input');
+// userName.addEventListener('blur', event => {
+//   console.dir(event.currentTarget.value.trim().length);
 
-  if (Number(event.currentTarget.value.trim().length) === Number(userName.dataset.length)) {
-    userName.classList.remove('invalid');
-    userName.classList.add('valid');
-    return;
-  }
-  userName.classList.add('invalid');
-});
+//   if (Number(event.currentTarget.value.trim().length) === Number(userName.dataset.length)) {
+//     userName.classList.remove('invalid');
+//     userName.classList.add('valid');
+//     return;
+//   }
+//   userName.classList.add('invalid');
+// });
 
 // Варіант 2 щоб був сірий коли ми стерли всі символи (тобто відкотився у 0 становище) і бачимо текст плесхолдера
 // const userName = document.querySelector("#validation-input");
@@ -22,3 +22,28 @@ userName.addEventListener('blur', event => {
 // 	}
 // 	userName.classList.add("invalid");
 // });
+
+const userName = document.querySelector('#validation-input');
+userName.addEventListener('blur', event => {
+  console.dir(event.currentTarget.value.trim().length);
+
+  if (Number(event.currentTarget.value.trim().length) === Number(userName.dataset.length)) {
+    userName.classList.add('valid');
+    userName.classList.remove('invalid');
+  }
+  userName.classList.remove('valid');
+  userName.classList.add('invalid');
+});
+// варіант Франек
+// const input = document.querySelector('#validation-input');
+// input.addEventListener('blur', onInputBlur);
+// function onInputBlur(event) {
+//   const symbolCount = event.currentTarget.value.trim().length;
+//   if (symbolCount === Number(input.dataset.length)) {
+//     input.classList.add('valid');
+//     input.classList.remove('invalid');
+//   } else {
+//     input.classList.remove('valid');
+//     input.classList.add('invalid');
+//   }
+// }
