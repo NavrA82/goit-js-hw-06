@@ -1,10 +1,11 @@
 const userName = document.querySelector('#validation-input');
 userName.addEventListener('blur', event => {
   console.dir(event.currentTarget.value.trim().length);
+
   if (Number(event.currentTarget.value.trim().length) === Number(userName.dataset.length)) {
     userName.classList.remove('invalid');
-    return;
     userName.classList.add('valid');
+    return;
   }
   userName.classList.add('invalid');
 });
