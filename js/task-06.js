@@ -3,8 +3,8 @@ userName.addEventListener('blur', event => {
   console.dir(event.currentTarget.value.trim().length);
 
   if (Number(event.currentTarget.value.trim().length) === Number(userName.dataset.length)) {
-    userName.classList.remove('invalid');
     userName.classList.add('valid');
+    userName.classList.remove('invalid');
     return;
   }
   userName.classList.add('invalid');
