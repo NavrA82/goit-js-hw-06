@@ -2,11 +2,13 @@ const widgetChangeColor = document.querySelector('.widget');
 const elementChangeColor = document.querySelector('.color');
 const buttonChangeColor = widgetChangeColor.lastElementChild;
 buttonChangeColor.addEventListener('click', onButtonChangeColor);
-function onButtonChangeColor(event) {
+
+function onButtonChangeColor() {
   const randomColor = getRandomHexColor();
   elementChangeColor.textContent = `${randomColor}`;
   document.body.style.backgroundColor = `${randomColor}`;
 }
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
